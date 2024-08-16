@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+sentence-transformers
+faiss-cpu
+PyPDF2
+requests
+streamlit
+langchain-community
+langchain-huggingface
+numpy
+pydantic
+langchain-core
+openai 

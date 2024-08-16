@@ -1,0 +1,25 @@
+version: '3.11'
+
+services:
+  fastapi:
+    build:
+      context: .
+      target: fastapi
+    ports:
+      - "8000:8000"  
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - AIML_API_KEY=0ed56395105244b98a2d62d397e07076 # Updated with AIML API key
+
+  streamlit:
+    build:
+      context: .
+      target: streamlit
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"  
+    depends_on:
+      - fastapi
